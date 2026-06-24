@@ -7,9 +7,10 @@ interface ExerciseCardProps {
   exercise: Exercise;
   onLogSet?: (setNumber: number, reps: number, weightKg: number) => void;
   completedSets?: number;
+  lastSet?: { weightKg: number; reps: number; date: string } | null;
 }
 
-export function ExerciseCard({ exercise, onLogSet, completedSets = 0 }: ExerciseCardProps) {
+export function ExerciseCard({ exercise, onLogSet, completedSets = 0, lastSet }: ExerciseCardProps) {
   const [expanded, setExpanded] = useState(false);
   const [reps, setReps] = useState(exercise.repRange.split('-')[0] ?? '10');
   const [weight, setWeight] = useState('0');
@@ -212,9 +213,16 @@ export function ExerciseCard({ exercise, onLogSet, completedSets = 0 }: Exercise
 
               {/* Set logger */}
               <div className="border-t border-orange-100 pt-3">
-                <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">
-                  Log Set {completedSets + 1} of {exercise.defaultSets}
-                </h4>
+                <div className="flex items-center justify-between mb-2">
+                  <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-500">
+                    Log Set {completedSets + 1} of {exercise.defaultSets}
+                  </h4>
+                  {lastSet && (
+                    <span className="text-xs text-forge-teal font-semibold">
+                      Last time: {lastSet.weightKg}kg × {lastSet.reps}
+                    </span>
+                  )}
+                </div>
                 <div className="flex gap-2 items-end">
                   <div className="flex-1">
                     <label className="text-xs text-gray-500 block mb-1">Weight (kg)</label>
@@ -245,6 +253,9 @@ export function ExerciseCard({ exercise, onLogSet, completedSets = 0 }: Exercise
                     Log
                   </button>
                 </div>
+                <p className="text-xs text-gray-400 mt-2 leading-relaxed">
+                  Progressive overload: when you can hit the top of the rep range on every set with good form, add a small amount of weight or one more rep next time. That steady increase is what builds the muscle.
+                </p>
               </div>
             </div>
           </motion.div>

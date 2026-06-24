@@ -8,10 +8,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        'forge-orange': '#E8873A',
-        'forge-amber': '#F5A623',
-        'forge-cream': '#FFF3DC',
-        'forge-teal': '#5BBFBF',
+        'forge-orange': '#DE7428',
+        'forge-amber': '#FCB53F',
+        'forge-cream': '#FBE49D',
+        'forge-teal': '#66C7CD',
         'forge-dark': '#1A1A2E',
         'forge-surface': '#FFFFFF',
         'forge-text': '#1A1A2E',

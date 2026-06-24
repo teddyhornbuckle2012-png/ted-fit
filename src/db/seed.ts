@@ -427,6 +427,64 @@ export const EXERCISES: Exercise[] = [
     animationUrl: null,
   },
 
+  // ─── ADDITIONAL EXERCISES ───────────────────────────────────────────────────
+  {
+    id: 'dumbbell-hammer-curl',
+    name: 'Dumbbell Hammer Curl',
+    primaryMuscles: ['biceps', 'forearms'],
+    equipment: 'dumbbell',
+    defaultSets: 3,
+    repRange: '10-12',
+    tempo: '1s up / 2s down',
+    cues: [
+      'Stand tall with a dumbbell in each hand, palms facing each other (neutral grip, thumbs up).',
+      'Pin your elbows to your sides and keep them there the whole set.',
+      'Curl the dumbbells up while keeping the neutral grip — thumbs stay up.',
+      'Squeeze hard at the top, then lower slowly to a full stretch.',
+    ],
+    commonMistakes: [
+      'Rotating the wrist like a normal curl — keep the grip neutral throughout.',
+      'Swinging the body or using momentum to lift.',
+      'Letting the elbows drift forward.',
+      'Half reps — control the full range up and down.',
+    ],
+    animationKeyframes: [
+      'Starting position: arms extended at sides, neutral grip, thumbs up.',
+      'Curl phase: forearms rise to about 45°, elbows fixed.',
+      'Top position: dumbbells near shoulders, thumbs up, brief squeeze.',
+      'Lowering phase: slow controlled descent back to full stretch.',
+    ],
+    animationUrl: null,
+  },
+  {
+    id: 'dumbbell-skull-crusher',
+    name: 'Dumbbell Skull Crusher (Floor)',
+    primaryMuscles: ['triceps'],
+    equipment: 'dumbbell',
+    defaultSets: 3,
+    repRange: '10-12',
+    tempo: '2s down / 1s up',
+    cues: [
+      'Lie flat on your back, dumbbells pressed above your chest, palms facing each other.',
+      'Keep your upper arms vertical and still — only the forearms move.',
+      'Bend at the elbows to lower the dumbbells toward your forehead/ears.',
+      'Stop just short of your head, then extend back up to lockout and squeeze the triceps.',
+    ],
+    commonMistakes: [
+      'Moving the upper arms — they should stay still and vertical.',
+      'Flaring the elbows out wide instead of keeping them tracking forward.',
+      'Going too heavy near your head — control matters more than load here.',
+      'Rushing the lowering phase.',
+    ],
+    animationKeyframes: [
+      'Starting position: dumbbells over chest, arms locked, palms facing.',
+      'Lowering phase: forearms bend to about 45°, upper arms fixed.',
+      'Bottom position: dumbbells beside the ears, elbows bent.',
+      'Press phase: extend back to lockout over the chest.',
+    ],
+    animationUrl: null,
+  },
+
   // ─── CORE EXERCISES ─────────────────────────────────────────────────────────
   {
     id: 'plank',
@@ -594,9 +652,10 @@ export const WORKOUTS: WorkoutDefinition[] = [
     location: 'home',
     exerciseIds: [
       'dumbbell-biceps-curl',
+      'dumbbell-hammer-curl',
       'concentration-curl',
       'dumbbell-overhead-triceps-extension',
-      'dumbbell-triceps-kickback',
+      'dumbbell-skull-crusher',
       'plank',
       'dead-bug',
       'hollow-body-hold',

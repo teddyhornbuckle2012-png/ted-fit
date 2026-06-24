@@ -2,6 +2,7 @@ import { useState, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { format } from 'date-fns';
+import { useLiveQuery } from 'dexie-react-hooks';
 import { WORKOUT_MAP, EXERCISE_MAP, WORKOUTS } from '../db/seed';
 import { db } from '../db/schema';
 import { ExerciseCard } from '../components/ExerciseCard';
@@ -21,6 +22,22 @@ export function WorkoutPage() {
   const [workoutComplete, setWorkoutComplete] = useState(false);
 
   const workout = id ? WORKOUT_MAP.get(id) : null;
+
+  // Load most recent logged set per exercise for this workout
+  const lastSets = useLiveQuery(async () => {
+    if (!workout) return {};
+    const allLogs = await db.setLogs
+      .where('exerciseId')
+      .anyOf(workout.exerciseIds)
+      .toArray();
+    const result: Record<string, { weightKg: number; reps: number; date: string }> = {};
+    for (const log of allLogs) {
+      if (!result[log.exerciseId] || log.date > result[log.exerciseId].date) {
+        result[log.exerciseId] = { weightKg: log.weightKg, reps: log.reps, date: log.date };
+      }
+    }
+    return result;
+  }, [workout?.id]) ?? {};
 
   const exerciseIds = workout
     ? isMiniMode
@@ -202,6 +219,11 @@ export function WorkoutPage() {
         </div>
       </div>
 
+      {/* Warm-up reminder */}
+      <div className="bg-forge-cream border border-amber-200 rounded-xl px-4 py-3 mb-4 text-sm text-forge-dark">
+        <span className="font-semibold">Warm up first:</span> 3–5 min easy movement, then one light warm-up set of the first exercise.
+      </div>
+
       {/* Mini mode toggle */}
       <button
         onClick={() => {
@@ -225,6 +247,7 @@ export function WorkoutPage() {
             key={exercise.id}
             exercise={exercise}
             completedSets={setCounts[exercise.id] ?? 0}
+            lastSet={lastSets[exercise.id] ?? null}
             onLogSet={(setNum, reps, weight) =>
               handleLogSet(exercise.id, setNum, reps, weight)
             }
