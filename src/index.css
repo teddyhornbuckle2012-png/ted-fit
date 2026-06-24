@@ -1,0 +1,52 @@
+@import './theme.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: var(--color-forge-cream);
+    color: var(--color-forge-text);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior: none;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .forge-card {
+    @apply bg-white rounded-2xl shadow-sm border border-orange-100 p-4;
+  }
+
+  .forge-btn-primary {
+    @apply bg-forge-orange text-white font-semibold rounded-xl px-6 py-3
+           active:scale-95 transition-transform duration-100;
+  }
+
+  .forge-btn-secondary {
+    @apply bg-forge-cream text-forge-orange font-semibold rounded-xl px-6 py-3
+           border border-forge-orange active:scale-95 transition-transform duration-100;
+  }
+
+  .bottom-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
+
+/* Scrollbar hiding for mobile feel */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+}
+
+/* Safe area for notched phones */
+.page-content {
+  padding-bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
+}
