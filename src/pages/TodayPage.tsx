@@ -14,7 +14,7 @@ const REST_MESSAGES = [
   "Recovery is training too.",
 ];
 
-const CONFETTI_COLORS = ['#E8873A', '#F5A623', '#5BBFBF', '#FFF3DC', '#1A1A2E'];
+const CONFETTI_COLORS = ['#4D8EA8', '#79A8CC', '#6A9AC0', '#A8C4DC', '#1A72C0', '#5978A0', '#D6DCE8', '#4D6F98', '#7AAFCA'];
 
 function Confetti() {
   return (
@@ -105,9 +105,9 @@ export function TodayPage() {
         <div>
           <h1
             className="text-3xl font-black tracking-tight"
-            style={{ color: '#E8873A' }}
+            style={{ color: '#4D8EA8' }}
           >
-            forge
+            ted fit
           </h1>
           <p className="text-sm text-forge-text-muted font-medium">{todayStr}</p>
         </div>
@@ -119,7 +119,7 @@ export function TodayPage() {
         <motion.div
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-100 rounded-2xl p-4 mb-4"
+          className="bg-gradient-to-r from-dulux-blueberry-white to-dulux-first-dawn border border-dulux-mineral-mist rounded-2xl p-4 mb-4"
         >
           <p className="text-xs font-semibold text-forge-orange uppercase tracking-wider mb-1">
             Today's intention
@@ -144,7 +144,7 @@ export function TodayPage() {
             <div className="text-4xl mb-2">🎉</div>
             <p className="font-bold text-lg">{todayCompletionMessage}</p>
             {totalDaysLogged >= 7 && (
-              <p className="text-sm text-orange-100 mt-1">
+              <p className="text-sm text-dulux-blueberry-white mt-1">
                 That's {totalDaysLogged} sessions — you're someone who trains.
               </p>
             )}
@@ -163,11 +163,11 @@ export function TodayPage() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="bg-teal-50 border border-teal-200 rounded-2xl p-5 mb-4 text-center"
+          className="bg-dulux-blueberry-white border border-dulux-river-valley rounded-2xl p-5 mb-4 text-center"
         >
           <div className="text-3xl mb-2">😴</div>
-          <p className="font-bold text-teal-700">{restMessage}</p>
-          <p className="text-sm text-teal-500 mt-1">Rest day logged. Streak preserved.</p>
+          <p className="font-bold text-dulux-vast-lake">{restMessage}</p>
+          <p className="text-sm text-dulux-river-valley mt-1">Rest day logged. Streak preserved.</p>
         </motion.div>
       ) : (
         <>
@@ -200,7 +200,7 @@ export function TodayPage() {
           {/* Rest day button */}
           <button
             onClick={() => markRestDay('rest')}
-            className="w-full text-sm text-gray-400 py-3 border border-dashed border-gray-200 rounded-2xl mb-4 hover:border-teal-300 hover:text-teal-500 transition-colors"
+            className="w-full text-sm text-gray-400 py-3 border border-dashed border-gray-200 rounded-2xl mb-4 hover:border-dulux-misty-sky hover:text-dulux-river-valley transition-colors"
           >
             😴 Mark today as rest day
           </button>
@@ -208,20 +208,20 @@ export function TodayPage() {
       )}
 
       {/* Weekly km progress */}
-      <div className="bg-white border border-orange-100 rounded-2xl p-4 mb-4">
+      <div className="bg-white border border-dulux-mineral-mist rounded-2xl p-4 mb-4">
         <div className="flex justify-between items-center mb-2">
           <span className="text-sm font-semibold text-forge-dark">Weekly km</span>
           <span className="text-sm font-bold text-forge-orange">
             {weeklyKm.toFixed(1)} / {weeklyKmTarget} km
           </span>
         </div>
-        <div className="w-full bg-orange-100 rounded-full h-3 overflow-hidden">
+        <div className="w-full bg-dulux-mineral-mist rounded-full h-3 overflow-hidden">
           <motion.div
             initial={{ width: 0 }}
             animate={{ width: `${weeklyProgress * 100}%` }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="h-full rounded-full"
-            style={{ background: 'linear-gradient(to right, #E8873A, #F5A623)' }}
+            style={{ background: 'linear-gradient(to right, #4D8EA8, #79A8CC)' }}
           />
         </div>
         <p className="text-xs text-gray-400 mt-1.5">
@@ -236,7 +236,7 @@ export function TodayPage() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="flex items-center gap-2 text-sm text-blue-500 bg-blue-50 rounded-xl px-3 py-2 mb-4"
+          className="flex items-center gap-2 text-sm text-dulux-nordic-sky bg-dulux-blueberry-white rounded-xl px-3 py-2 mb-4"
         >
           <span>❄️</span>
           <span>

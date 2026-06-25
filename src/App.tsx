@@ -32,9 +32,9 @@ function OnboardingModal({ onComplete }: { onComplete: (anchor: string) => void 
         <div className="text-center mb-6">
           <div
             className="text-4xl font-black mb-2"
-            style={{ color: '#E8873A' }}
+            style={{ color: '#4D8EA8' }}
           >
-            forge
+            ted fit
           </div>
           <h2 className="text-xl font-bold text-forge-dark">Welcome to Forge</h2>
           <p className="text-sm text-gray-500 mt-1">
@@ -46,7 +46,7 @@ function OnboardingModal({ onComplete }: { onComplete: (anchor: string) => void 
           <label className="text-sm font-semibold text-forge-dark block mb-2">
             Finish this sentence:
           </label>
-          <div className="flex items-center gap-2 bg-orange-50 rounded-xl p-3 border border-orange-200">
+          <div className="flex items-center gap-2 bg-dulux-blueberry-white rounded-xl p-3 border border-dulux-quintessential-blue">
             <span className="text-sm text-gray-500 whitespace-nowrap">After</span>
             <input
               type="text"
@@ -181,9 +181,9 @@ export default function App() {
         <div className="text-center">
           <div
             className="text-4xl font-black mb-2"
-            style={{ color: '#E8873A' }}
+            style={{ color: '#4D8EA8' }}
           >
-            forge
+            ted fit
           </div>
           <div className="text-sm text-gray-400">Loading...</div>
         </div>

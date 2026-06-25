@@ -179,7 +179,7 @@ function PersonalBestsTable() {
         return (
           <div
             key={exId}
-            className="flex items-center justify-between py-2 border-b border-orange-50 last:border-0"
+            className="flex items-center justify-between py-2 border-b border-dulux-blueberry-white last:border-0"
           >
             <span className="text-sm text-forge-dark font-medium">{exercise.name}</span>
             {best && (

@@ -54,8 +54,8 @@ export function ChecklistItem({
 
   const typeBadgeColor = () => {
     switch (scheduleItem.type) {
-      case 'workout': return 'bg-orange-100 text-orange-700';
-      case 'run': return 'bg-teal-100 text-teal-700';
+      case 'workout': return 'bg-dulux-mineral-mist text-dulux-stonewashed-blue';
+      case 'run': return 'bg-dulux-blissful-blue text-dulux-vast-lake';
       case 'rowing': return 'bg-blue-100 text-blue-700';
       case 'core': return 'bg-red-100 text-red-700';
       case 'mobility': return 'bg-purple-100 text-purple-700';
@@ -74,7 +74,7 @@ export function ChecklistItem({
           ? 'bg-green-50 border-green-200'
           : item.skipped
           ? 'bg-gray-50 border-gray-200 opacity-60'
-          : 'bg-white border-orange-100 shadow-sm'
+          : 'bg-white border-dulux-mineral-mist shadow-sm'
       )}
     >
       <div className="flex items-center gap-3">
@@ -89,7 +89,7 @@ export function ChecklistItem({
               ? 'bg-green-500 border-green-500'
               : item.skipped
               ? 'bg-gray-300 border-gray-300'
-              : 'border-orange-300 hover:border-forge-orange'
+              : 'border-dulux-quintessential-blue hover:border-forge-orange'
           )}
         >
           <AnimatePresence>
@@ -153,7 +153,7 @@ export function ChecklistItem({
 
           {/* Backup used */}
           {item.backupUsed && (
-            <span className="text-xs text-teal-600 mt-1 block">
+            <span className="text-xs text-dulux-sky-view mt-1 block">
               ✓ {item.backupUsed}
             </span>
           )}
@@ -187,7 +187,7 @@ export function ChecklistItem({
                     onComplete();
                     setShowRowingOptions(false);
                   }}
-                  className="flex-1 bg-teal-500 text-white text-sm font-semibold py-2 px-3 rounded-xl"
+                  className="flex-1 bg-dulux-nordic-sky text-white text-sm font-semibold py-2 px-3 rounded-xl"
                 >
                   Did it ✅
                 </button>
@@ -198,7 +198,7 @@ export function ChecklistItem({
                       onSwapBackup?.(backup.label);
                       setShowRowingOptions(false);
                     }}
-                    className="flex-1 bg-orange-100 text-orange-700 text-sm font-semibold py-2 px-3 rounded-xl"
+                    className="flex-1 bg-dulux-mineral-mist text-dulux-stonewashed-blue text-sm font-semibold py-2 px-3 rounded-xl"
                   >
                     {backup.label}
                   </button>

@@ -36,8 +36,8 @@ export function ExerciseCard({ exercise, onLogSet, completedSets = 0, lastSet }:
       chest: 'bg-red-100 text-red-700',
       back: 'bg-blue-100 text-blue-700',
       shoulders: 'bg-purple-100 text-purple-700',
-      biceps: 'bg-amber-100 text-amber-700',
-      triceps: 'bg-orange-100 text-orange-700',
+      biceps: 'bg-dulux-first-dawn text-dulux-vast-lake',
+      triceps: 'bg-dulux-mineral-mist text-dulux-stonewashed-blue',
       core: 'bg-green-100 text-green-700',
       legs: 'bg-teal-100 text-teal-700',
       'rear-delts': 'bg-pink-100 text-pink-700',
@@ -54,7 +54,7 @@ export function ExerciseCard({ exercise, onLogSet, completedSets = 0, lastSet }:
         'rounded-2xl border overflow-hidden transition-colors',
         completedSets >= exercise.defaultSets
           ? 'border-green-200 bg-green-50'
-          : 'border-orange-100 bg-white'
+          : 'border-dulux-mineral-mist bg-white'
       )}
     >
       {/* Header */}
@@ -88,7 +88,7 @@ export function ExerciseCard({ exercise, onLogSet, completedSets = 0, lastSet }:
                 key={i}
                 className={clsx(
                   'w-2 h-2 rounded-full',
-                  i < completedSets ? 'bg-forge-orange' : 'bg-orange-100'
+                  i < completedSets ? 'bg-forge-orange' : 'bg-dulux-mineral-mist'
                 )}
               />
             ))}
@@ -114,15 +114,15 @@ export function ExerciseCard({ exercise, onLogSet, completedSets = 0, lastSet }:
             <div className="px-4 pb-4 space-y-4">
               {/* Quick stats */}
               <div className="grid grid-cols-3 gap-2 text-center">
-                <div className="bg-orange-50 rounded-xl p-2">
+                <div className="bg-dulux-blueberry-white rounded-xl p-2">
                   <div className="text-lg font-bold text-forge-orange">{exercise.defaultSets}</div>
                   <div className="text-xs text-gray-500">sets</div>
                 </div>
-                <div className="bg-orange-50 rounded-xl p-2">
+                <div className="bg-dulux-blueberry-white rounded-xl p-2">
                   <div className="text-lg font-bold text-forge-orange">{exercise.repRange}</div>
                   <div className="text-xs text-gray-500">reps</div>
                 </div>
-                <div className="bg-orange-50 rounded-xl p-2">
+                <div className="bg-dulux-blueberry-white rounded-xl p-2">
                   <div className="text-xs font-bold text-forge-orange">{exercise.tempo}</div>
                   <div className="text-xs text-gray-500">tempo</div>
                 </div>
@@ -212,7 +212,7 @@ export function ExerciseCard({ exercise, onLogSet, completedSets = 0, lastSet }:
               </div>
 
               {/* Set logger */}
-              <div className="border-t border-orange-100 pt-3">
+              <div className="border-t border-dulux-mineral-mist pt-3">
                 <div className="flex items-center justify-between mb-2">
                   <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-500">
                     Log Set {completedSets + 1} of {exercise.defaultSets}
@@ -232,7 +232,7 @@ export function ExerciseCard({ exercise, onLogSet, completedSets = 0, lastSet }:
                       onChange={(e) => setWeight(e.target.value)}
                       min="0"
                       step="0.5"
-                      className="w-full border border-orange-200 rounded-xl px-3 py-2 text-center font-bold text-forge-dark focus:outline-none focus:border-forge-orange"
+                      className="w-full border border-dulux-quintessential-blue rounded-xl px-3 py-2 text-center font-bold text-forge-dark focus:outline-none focus:border-forge-orange"
                     />
                   </div>
                   <div className="flex-1">
@@ -242,7 +242,7 @@ export function ExerciseCard({ exercise, onLogSet, completedSets = 0, lastSet }:
                       value={reps}
                       onChange={(e) => setReps(e.target.value)}
                       min="0"
-                      className="w-full border border-orange-200 rounded-xl px-3 py-2 text-center font-bold text-forge-dark focus:outline-none focus:border-forge-orange"
+                      className="w-full border border-dulux-quintessential-blue rounded-xl px-3 py-2 text-center font-bold text-forge-dark focus:outline-none focus:border-forge-orange"
                     />
                   </div>
                   <button

@@ -9,7 +9,7 @@ interface WorkoutCardProps {
 }
 
 const locationLabel = { home: 'Home', gym: 'Gym' };
-const locationColor = { home: 'text-teal-600 bg-teal-50', gym: 'text-orange-600 bg-orange-50' };
+const locationColor = { home: 'text-dulux-vast-lake bg-dulux-mineral-mist', gym: 'text-dulux-nordic-sky bg-dulux-blueberry-white' };
 
 export function WorkoutCard({ workout, className }: WorkoutCardProps) {
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ export function WorkoutCard({ workout, className }: WorkoutCardProps) {
       whileTap={{ scale: 0.97 }}
       onClick={() => navigate(`/workout/${workout.id}`)}
       className={clsx(
-        'bg-white rounded-2xl p-4 border border-orange-100 shadow-sm cursor-pointer',
+        'bg-white rounded-2xl p-4 border border-dulux-mineral-mist shadow-sm cursor-pointer',
         className
       )}
     >

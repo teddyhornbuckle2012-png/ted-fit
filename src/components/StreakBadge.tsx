@@ -16,8 +16,8 @@ export function StreakBadge({ streak, className }: StreakBadgeProps) {
       className={clsx(
         'flex items-center gap-1.5 px-3 py-1.5 rounded-full font-bold text-sm',
         isHot
-          ? 'bg-amber-100 text-amber-700'
-          : 'bg-orange-100 text-forge-orange',
+          ? 'bg-dulux-sky-view text-white'
+          : 'bg-dulux-blueberry-white text-forge-orange',
         className
       )}
     >
