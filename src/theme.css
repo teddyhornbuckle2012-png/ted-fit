@@ -1,10 +1,10 @@
 :root {
-  --color-forge-orange: #4D8EA8;   /* Nordic Sky — primary CTA */
-  --color-forge-amber: #79A8CC;    /* Bluebird Skies — secondary accent */
-  --color-forge-cream: #D6DCE8;    /* Blueberry White — page background */
-  --color-forge-teal: #6A9AC0;     /* Sky View — info / streak highlights */
-  --color-forge-dark: #1A2E4A;     /* Deep navy */
+  --color-forge-orange: #DE7428;
+  --color-forge-amber: #FCB53F;
+  --color-forge-cream: #FBE49D;
+  --color-forge-teal: #66C7CD;
+  --color-forge-dark: #1A1A2E;
   --color-forge-surface: #FFFFFF;
-  --color-forge-text: #1A2E4A;
-  --color-forge-text-muted: #849AA8; /* Coastal Grey */
+  --color-forge-text: #1A1A2E;
+  --color-forge-text-muted: #6B7280;
 }

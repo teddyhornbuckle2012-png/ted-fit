@@ -32,7 +32,7 @@ function OnboardingModal({ onComplete }: { onComplete: (anchor: string) => void 
         <div className="text-center mb-6">
           <div
             className="text-4xl font-black mb-2"
-            style={{ color: '#4D8EA8' }}
+            style={{ color: '#DE7428' }}
           >
             ted fit
           </div>
@@ -46,7 +46,7 @@ function OnboardingModal({ onComplete }: { onComplete: (anchor: string) => void 
           <label className="text-sm font-semibold text-forge-dark block mb-2">
             Finish this sentence:
           </label>
-          <div className="flex items-center gap-2 bg-dulux-blueberry-white rounded-xl p-3 border border-dulux-quintessential-blue">
+          <div className="flex items-center gap-2 bg-orange-50 rounded-xl p-3 border border-orange-200">
             <span className="text-sm text-gray-500 whitespace-nowrap">After</span>
             <input
               type="text"
@@ -181,7 +181,7 @@ export default function App() {
         <div className="text-center">
           <div
             className="text-4xl font-black mb-2"
-            style={{ color: '#4D8EA8' }}
+            style={{ color: '#DE7428' }}
           >
             ted fit
           </div>

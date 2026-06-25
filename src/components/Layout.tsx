@@ -5,8 +5,8 @@ function HomeIcon({ active }: { active: boolean }) {
   return (
     <svg
       viewBox="0 0 24 24"
-      fill={active ? '#4D8EA8' : 'none'}
-      stroke={active ? '#4D8EA8' : '#6B7280'}
+      fill={active ? '#DE7428' : 'none'}
+      stroke={active ? '#DE7428' : '#6B7280'}
       strokeWidth="2"
       className="w-6 h-6"
     >
@@ -25,14 +25,14 @@ function DumbbellIcon({ active }: { active: boolean }) {
     <svg
       viewBox="0 0 24 24"
       fill="none"
-      stroke={active ? '#4D8EA8' : '#6B7280'}
+      stroke={active ? '#DE7428' : '#6B7280'}
       strokeWidth="2"
       className="w-6 h-6"
     >
-      <rect x="2" y="10" width="4" height="4" rx="1" fill={active ? '#4D8EA8' : 'none'} />
-      <rect x="18" y="10" width="4" height="4" rx="1" fill={active ? '#4D8EA8' : 'none'} />
-      <rect x="5" y="8" width="3" height="8" rx="1" fill={active ? '#4D8EA8' : 'none'} />
-      <rect x="16" y="8" width="3" height="8" rx="1" fill={active ? '#4D8EA8' : 'none'} />
+      <rect x="2" y="10" width="4" height="4" rx="1" fill={active ? '#DE7428' : 'none'} />
+      <rect x="18" y="10" width="4" height="4" rx="1" fill={active ? '#DE7428' : 'none'} />
+      <rect x="5" y="8" width="3" height="8" rx="1" fill={active ? '#DE7428' : 'none'} />
+      <rect x="16" y="8" width="3" height="8" rx="1" fill={active ? '#DE7428' : 'none'} />
       <line x1="8" y1="12" x2="16" y2="12" strokeWidth="2.5" />
     </svg>
   );
@@ -43,7 +43,7 @@ function ChartIcon({ active }: { active: boolean }) {
     <svg
       viewBox="0 0 24 24"
       fill="none"
-      stroke={active ? '#4D8EA8' : '#6B7280'}
+      stroke={active ? '#DE7428' : '#6B7280'}
       strokeWidth="2"
       className="w-6 h-6"
     >
@@ -51,7 +51,7 @@ function ChartIcon({ active }: { active: boolean }) {
         points="22 12 18 12 15 21 9 3 6 12 2 12"
         strokeLinecap="round"
         strokeLinejoin="round"
-        stroke={active ? '#4D8EA8' : '#6B7280'}
+        stroke={active ? '#DE7428' : '#6B7280'}
       />
     </svg>
   );
@@ -62,7 +62,7 @@ function GearIcon({ active }: { active: boolean }) {
     <svg
       viewBox="0 0 24 24"
       fill="none"
-      stroke={active ? '#4D8EA8' : '#6B7280'}
+      stroke={active ? '#DE7428' : '#6B7280'}
       strokeWidth="2"
       className="w-6 h-6"
     >
@@ -115,7 +115,7 @@ export function Layout() {
       </main>
 
       {/* Bottom nav */}
-      <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-dulux-mineral-mist bottom-safe z-50">
+      <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-orange-100 bottom-safe z-50">
         <div className="flex items-center justify-around px-2 pt-1 pb-1">
           <NavItem
             to="/"

@@ -195,7 +195,7 @@ export function WorkoutPage() {
               {workout.label}
             </span>
             {isMiniMode && (
-              <span className="text-xs bg-dulux-first-dawn text-dulux-vast-lake px-2 py-0.5 rounded-full font-semibold">
+              <span className="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full font-semibold">
                 5-min
               </span>
             )}
@@ -210,7 +210,7 @@ export function WorkoutPage() {
           <span>{completedSets} / {totalSets} sets</span>
           <span>{Math.round(progress * 100)}%</span>
         </div>
-        <div className="w-full bg-dulux-mineral-mist rounded-full h-2 overflow-hidden">
+        <div className="w-full bg-orange-100 rounded-full h-2 overflow-hidden">
           <motion.div
             animate={{ width: `${progress * 100}%` }}
             transition={{ duration: 0.4 }}
@@ -220,7 +220,7 @@ export function WorkoutPage() {
       </div>
 
       {/* Warm-up reminder */}
-      <div className="bg-dulux-blueberry-white border border-dulux-quintessential-blue rounded-xl px-4 py-3 mb-4 text-sm text-forge-dark">
+      <div className="bg-forge-cream border border-amber-200 rounded-xl px-4 py-3 mb-4 text-sm text-forge-dark">
         <span className="font-semibold">Warm up first:</span> 3–5 min easy movement, then one light warm-up set of the first exercise.
       </div>
 
@@ -234,7 +234,7 @@ export function WorkoutPage() {
           'w-full text-sm font-semibold py-2.5 rounded-xl mb-4 transition-colors',
           isMiniMode
             ? 'bg-forge-orange text-white'
-            : 'bg-dulux-blueberry-white text-dulux-nordic-sky border border-dulux-quintessential-blue'
+            : 'bg-amber-50 text-amber-700 border border-amber-200'
         )}
       >
         {isMiniMode ? '📋 Switch to full workout' : '⚡ Too tired? 5-min version'}

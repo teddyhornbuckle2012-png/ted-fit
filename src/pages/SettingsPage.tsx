@@ -91,7 +91,7 @@ export function SettingsPage() {
               type="time"
               value={localTime}
               onChange={(e) => setLocalTime(e.target.value)}
-              className="w-full border border-dulux-quintessential-blue rounded-xl px-3 py-2 font-semibold text-forge-dark focus:outline-none focus:border-forge-orange"
+              className="w-full border border-orange-200 rounded-xl px-3 py-2 font-semibold text-forge-dark focus:outline-none focus:border-forge-orange"
             />
           </div>
         )}
@@ -111,7 +111,7 @@ export function SettingsPage() {
           value={localAnchor}
           onChange={(e) => setLocalAnchor(e.target.value)}
           placeholder="get home from school"
-          className="w-full border border-dulux-quintessential-blue rounded-xl px-3 py-2 text-forge-dark focus:outline-none focus:border-forge-orange"
+          className="w-full border border-orange-200 rounded-xl px-3 py-2 text-forge-dark focus:outline-none focus:border-forge-orange"
         />
         <p className="text-xs text-gray-400 mt-2">
           Preview: "At {localTime}, after {localAnchor || '…'}, I'll train."

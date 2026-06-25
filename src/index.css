@@ -19,7 +19,7 @@
 
 @layer components {
   .forge-card {
-    @apply bg-white rounded-2xl shadow-sm border border-dulux-mineral-mist p-4;
+    @apply bg-white rounded-2xl shadow-sm border border-orange-100 p-4;
   }
 
   .forge-btn-primary {
